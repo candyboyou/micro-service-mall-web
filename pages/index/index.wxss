@@ -84,9 +84,13 @@
 }
 
 .section {
+  border-radius: 20rpx;
   background: #fff;
   color: #333;
   margin-top: 20rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  justify-content: center;
 }
 
 .section .h {
@@ -122,6 +126,7 @@
 }
 
 .hot .item {
+  border-radius: 40rpx;
   margin-right: 25rpx;
 }
 
@@ -139,6 +144,16 @@
   height: 266rpx;
   display: block;
   margin-bottom: 25rpx;
+}
+
+.category{
+  background-color: #fff;
+}
+
+.category .items {
+  width: 320rpx;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
 }
 
 .pick .pick-wrap {
