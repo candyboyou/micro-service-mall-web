@@ -50,7 +50,7 @@
 <!--    </view>-->
 
     <!-- 大图带边框板块 -->
-    <view class="section pick" wx:if="{{item.type==4&&item.list.length>0}}">
+    <view class="section pick" wx:if="{{item.type==3&&item.list.length>0}}">
       <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">
         <text class="txt">{{item.title}}</text>
         <image class="arrow" src="/assets/rightArrow.png"></image>
@@ -61,6 +61,19 @@
         </view>
       </view>
     </view>
+
+<!--    <view class="menu-detail" wx:if="{{item.type==4&&item.list.length>0}}" >-->
+      <scroll-view scroll-x="true" wx:if="{{item.type==4&&item.list.length>0}}" >
+        <view class="menu-detail" scroll-x="true">
+          <text class="item">精选</text>
+          <text class="item">手机</text>
+          <text class="item">家电</text>
+          <view class="item">特惠</view>
+          <view class="item">智能</view>
+          <view class="item">生活</view>
+        </view>
+      </scroll-view>
+<!--    </view>-->
 
     <!-- 大图无边框板块 -->
     <view class="section pick" wx:if="{{item.type==5&&item.list.length>0}}">
@@ -75,13 +88,6 @@
       </view>
     </view>
   </view>
-
-  <view class="category" wx:if="{{item.type==1&&item.list.length>0}}">
-      <view class="items" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
-        <!-- <image src="{{iitem.picUrl}}" background-size="cover" data-value="{{iitem}}"></image> -->
-        <text>{{iitem.title}}</text>
-      </view>
-    </view>
 
   <view class="more">
     <text class="title">—— 更多内容,敬请期待 ——</text>
