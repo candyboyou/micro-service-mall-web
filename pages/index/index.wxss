@@ -37,17 +37,28 @@
   padding-top: 110rpx;
   display: flex;
   justify-content: center;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .banner {
-  width: 700rpx;
+  width: 730rpx;
   height: 302rpx;
+}
+
+.banner swiper-item{
+  text-align: center;/*这里是重点*/
 }
 
 .banner image {
   width: 100%;
   height: 315rpx;
+}
+
+.banner-single {
+  /*width: 90%;*/
+  display: inline-block; /*这里是重点*/
+  width: 96%;/*这里是重点*/
+  height: 360rpx;
 }
 
 .menu {
@@ -200,6 +211,13 @@
   margin-top: 25rpx;
   margin-right: 25rpx;
 } */
+
+.product-list {
+  /*margin-top: 20rpx;*/
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  justify-content: center;
+}
 
 .more {
   padding: 30rpx 0 50rpx 0;

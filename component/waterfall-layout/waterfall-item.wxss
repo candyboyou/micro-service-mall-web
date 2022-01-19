@@ -1,0 +1,9 @@
+.waterfall-item {
+  box-sizing: border-box;
+  position: absolute;
+  width: 345rpx;
+  overflow: hidden;
+  border: 1rpx solid #f0f0f0;
+  background: #ffffff;
+  border-radius: 15px;
+}

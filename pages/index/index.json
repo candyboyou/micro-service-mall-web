@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "product-hot": "/component/product-hot/product-hot",
-    "product-big": "/component/product-big/product-big"
+    "product-big": "/component/product-big/product-big",
+    "waterfall": "/component/waterfall-layout/waterfall",
+    "waterfall-item": "/component/waterfall-layout/waterfall-item"
   }
 }

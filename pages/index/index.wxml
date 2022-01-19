@@ -12,15 +12,20 @@
 
     <!-- 轮播图 -->
     <view class="banner-wrap" wx:if="{{item.type==0&&item.list.length>0}}">
-      <swiper class="banner" indicator-dots="true" indicator-color="#e0e0e0" indicator-active-color="#fff" autoplay="true" interval="3000" duration="1000">
+      <swiper class="banner" indicator-dots="true" indicator-color="red" indicator-active-color="#fff" autoplay="true" interval="3000" duration="1000">
         <swiper-item wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}">
-          <image src="{{iitem.picUrl}}" background-size="cover" mode="aspectFit" data-value="{{iitem}}" bindtap="handleClick"></image>
+          <view class="banner-single">
+            <image src="{{iitem.picUrl}}" background-size="cover" mode="aspectFit" data-value="{{iitem}}" bindtap="handleClick"></image>
+          </view>
         </swiper-item>
+<!--        <swiper-item wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}">-->
+<!--          <image src="{{iitem.picUrl}}" background-size="cover" mode="aspectFit" data-value="{{iitem}}" bindtap="handleClick"></image>-->
+<!--        </swiper-item>-->
       </swiper>
     </view>
 
     <!-- 快捷频道图标 -->
-    <view class="menu" wx:if="{{item.type==1&&item.list.length>0}}">
+    <view class="section menu" wx:if="{{item.type==1&&item.list.length>0}}">
       <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
         <image src="{{iitem.picUrl}}" background-size="cover" data-value="{{iitem}}"></image>
         <text>{{iitem.title}}</text>
@@ -50,17 +55,6 @@
 <!--    </view>-->
 
     <!-- 大图带边框板块 -->
-    <view class="section pick" wx:if="{{item.type==3&&item.list.length>0}}">
-      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">
-        <text class="txt">{{item.title}}</text>
-        <image class="arrow" src="/assets/rightArrow.png"></image>
-      </view>
-      <view class="pick-wrap">
-        <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
-          <product-big data="{{iitem}}"></product-big>
-        </view>
-      </view>
-    </view>
 
 <!--    <view class="menu-detail" wx:if="{{item.type==4&&item.list.length>0}}" >-->
       <scroll-view scroll-x="true" wx:if="{{item.type==4&&item.list.length>0}}" >
@@ -93,18 +87,37 @@
       </scroll-view>
 <!--   </view>-->
 
-    <!-- 大图无边框板块 -->
-    <view class="section pick" wx:if="{{item.type==5&&item.list.length>0}}">
-      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">
-        <text class="txt">{{item.title}}</text>
-        <image class="arrow" src="/assets/rightArrow.png"></image>
-      </view>
-      <view class="pick-wrap">
-        <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
-          <product-big data="{{iitem}}" border="false"></product-big>
-        </view>
-      </view>
+    <view class="product-list" wx:if="{{item.type==5&&item.list.length>0}}">
+      <!--      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">-->
+      <!--        <text class="txt">{{item.title}}</text>-->
+      <!--        <image class="arrow" src="/assets/rightArrow.png"></image>-->
+      <!--      </view>-->
+<!--      <view class="pick-wrap">-->
+<!--        <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">-->
+<!--          <product-big data="{{iitem}}"></product-big>-->
+<!--        </view>-->
+
+
+        <waterfall custom-class="waterfall-box" loading="{{updateLoading}}" isAllLoaded="{{isAllLoaded}}">
+          <waterfall-item custom-class="product-item-box" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}">
+              <product-big data="{{iitem}}"></product-big>
+          </waterfall-item>
+        </waterfall>
+<!--      </view>-->
     </view>
+
+    <!-- 大图无边框板块 -->
+<!--    <view class="section pick" wx:if="{{item.type==5&&item.list.length>0}}">-->
+<!--      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">-->
+<!--        <text class="txt">{{item.title}}</text>-->
+<!--        <image class="arrow" src="/assets/rightArrow.png"></image>-->
+<!--      </view>-->
+<!--      <view class="pick-wrap">-->
+<!--        <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">-->
+<!--          <product-big data="{{iitem}}" border="false"></product-big>-->
+<!--        </view>-->
+<!--      </view>-->
+<!--    </view>-->
   </view>
 
   <view class="more">
