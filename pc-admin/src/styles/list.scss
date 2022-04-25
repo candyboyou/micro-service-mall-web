@@ -1,0 +1,21 @@
+@import 'app';
+
+.list {
+
+  .search-form-group{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .search-form-group .single-form-group {
+    width: 20%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .search-form-group .single-form-group .input-group-label {
+    margin-left: 2%;
+    margin-right: 1%;
+  }
+}

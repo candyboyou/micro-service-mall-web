@@ -1,0 +1,95 @@
+@import 'app';
+
+.page-detail {
+
+  .input-group-label {
+    margin-left: 2%;
+    margin-right: 1%;
+  }
+
+  .input-group-content {
+    width: 20%;
+  }
+
+  .input-group-select {
+    width: 20%
+  }
+
+  .wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .multiply-label {
+    width: 20%;
+    margin-left: 2%;
+    margin-right: 1%
+  }
+
+  .add-option-button {
+    margin-left: 1%;
+    height: max-content;
+  }
+
+  .options {
+    width: 80%;
+    min-height: 5em;
+    margin-left: 0.8%;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c1ccd3;
+    border-radius: 0.5rem;
+  }
+
+  .sub-option-draggable {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .options .single-option {
+    width: 15%;
+    height: fit-content;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c1ccd3;
+    border-radius: 0.5rem;
+  }
+
+  .options .single-option .internal-single-option {
+    margin: 3%;
+    text-align: center;
+  }
+
+  .options .single-option .internal-single-option .close {
+    float: right;
+    margin-top: -2px;
+  }
+  .close:before {
+    font-size: 13px;
+    content: "\2715";
+  }
+
+  .placeholder-options {
+    margin: 1%;
+  }
+
+  .upload-button {
+    width: auto;
+    margin-top: 4px;
+  }
+
+  .textarea {
+    height: 10em;
+    width: 70%;
+  }
+}

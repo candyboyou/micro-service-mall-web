@@ -1,0 +1,21 @@
+@import '../../styles/app';
+
+.commodity-list {
+  .table th {
+    font-size: $font-size-sm;
+  }
+
+  .search-label {
+
+  }
+
+  .input-group-label {
+    margin-left: 2%;
+    margin-right: 2%
+  }
+
+  .input-group-select {
+    width: 100px;
+  }
+}
+

@@ -1,0 +1,72 @@
+@import '../../styles/app';
+
+.attribute {
+  .table th {
+    font-size: $font-size-sm;
+  }
+
+  .search-label {
+  }
+
+  .input-group-label {
+    margin-left: 2%;
+    margin-right: 2%
+  }
+
+  .input-group-select {
+    width: 130px;
+  }
+
+  .radio-input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .optionsOfAttr {
+    width: 100%;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    margin-left: 0.8%;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c1ccd3;
+    border-radius: 0.5rem;
+  }
+
+  .optionsOfAttr .singleOption {
+    width: 20%;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c1ccd3;
+    border-radius: 0.5rem;
+  }
+
+  .optionsOfAttr .singleOption .internalOfSingleOption {
+    margin: 5%;
+  }
+
+  .optionsOfAttr .singleOption .internalOfSingleOption .close {
+    float: right;
+  }
+  .close:before {
+    font-size: 13px;
+    content: "\2715";
+  }
+
+}
+
+.modal-style {
+  background-color: transparent;
+  border-radius: 0.45rem;
+}
